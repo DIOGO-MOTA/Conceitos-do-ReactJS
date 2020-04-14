@@ -14,7 +14,7 @@ function App() {
   
   async function handleAddRepository() {
     const response = await api.post('repositories', {
-      title: "Desafio ReactJS",
+      title: `Novo repository ${Date.now()}`,
       url: "https://github.com/DIOGO-MOTA",
       techs: ["Reactjs","React Native"]
     });
@@ -32,7 +32,9 @@ function App() {
       repository => repository.id !== id
     )
 
-    setRepositories(repository)
+   
+    
+    setRepositories( repository);
     
   }
 
